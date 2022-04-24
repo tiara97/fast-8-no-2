@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 35px;
+			}
+			.calculator {
+				width: 344px;
+				margin: auto;
+				background-color: #39383d;
+				padding: 20px;
+				border-radius: 8px;
+			}
+			.inputDisplay {
+				width: 100%;
+				height: 80px;
+				background-color: #a2af77;
+				margin-bottom: 20px;
+				border-radius: 10px;
+			}
+			input[type='button'] {
+				width: 80px;
+				height: 80px;
+				margin: 3px;
+				color: #fff;
+				border-radius: 8px;
+				background-color: #58595b;
+			}
+		</style>
+	</head>
+
+	<body
+		style="
+			background-color: #f9f9fa;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		"
+	>
+		<div class="calculator">
+			<form name="form">
+				<input class="inputDisplay" />
+			</form>
+
+			<table>
+				<tr>
+                    <td colspan="2">
+						<input
+                        type="button"
+                        value="C"
+                        onclick="clearInput()"
+							style="width: 166px; background-color: red"
+						/>
+					</td>
+					<td>
+						<input
+							type="button"
+							value="%"
+							onclick="insertCharacter('%')"
+							style="background-color: rgb(247, 150, 40)"
+						/>
+					</td>
+					<td>
+						<input
+							type="button"
+							value="/"
+							onclick="insertCharacter('/')"
+							style="background-color: rgb(247, 150, 40)"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="7" onclick="insertCharacter('7')" />
+					</td>
+					<td>
+						<input type="button" value="8" onclick="insertCharacter('8')" />
+					</td>
+					<td>
+						<input type="button" value="9" onclick="insertCharacter('9')" />
+					</td>
+					<td>
+						<input
+							type="button"
+							value="*"
+							onclick="insertCharacter('*')"
+							style="background-color: rgb(247, 150, 40)"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="4" onclick="insertCharacter('4')" />
+					</td>
+					<td>
+						<input type="button" value="5" onclick="insertCharacter('5')" />
+					</td>
+					<td>
+						<input type="button" value="6" onclick="insertCharacter('6')" />
+					</td>
+					<td>
+						<input
+							type="button"
+							value="-"
+							onclick="insertCharacter('-')"
+							style="background-color: rgb(247, 150, 40)"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="1" onclick="insertCharacter('1')" />
+					</td>
+					<td>
+						<input type="button" value="2" onclick="insertCharacter('2')" />
+					</td>
+					<td>
+						<input type="button" value="3" onclick="insertCharacter('3')" />
+					</td>
+					<td>
+						<input
+							type="button"
+							value="+"
+							onclick="insertCharacter('+')"
+							style="background-color: rgb(247, 150, 40)"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="0" onclick="insertCharacter('0')" />
+					</td>
+					<td>
+						<input type="button" value="." onclick="insertCharacter('.')" />
+					</td>
+					<td colspan="2">
+						<input
+							type="button"
+							value="="
+							onclick="result()"
+							style="width: 166px; background-color: rgb(247, 150, 40)"
+						/>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+    <script type="text/javascript" src="function.js"></script>
+</html>
